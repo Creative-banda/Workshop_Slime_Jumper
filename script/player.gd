@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var tileMap : TileMapLayer
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
@@ -33,7 +35,34 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, 10)
 		
 	move_and_slide()
-
+	check_tile_damage()
+	
+	
 func change_animation(animation):
 	if animated_sprite_2d.animation != animation:
 		animated_sprite_2d.play(animation)
+
+func check_tile_damage():
+	var local_pos := tileMap.to_local(global_position + Vector2(0, 5))
+	var cell := tileMap.local_to_map(local_pos)
+	var tile_data := tileMap.get_cell_tile_data(cell)
+
+	if tile_data and tile_data.get_custom_data("damage") == 1:
+		take_damage(1, global_position)
+
+func take_damage(_damage, object_position):
+	print("taking damage")
+	if isHurt:
+		return false
+	
+	animated_sprite_2d.play("knockback")
+	isHurt = true
+	# Apply the force
+	if global_position.x > object_position.x:
+		velocity = Vector2(500, JUMP_VELOCITY * 1.2)
+	else:
+		velocity = Vector2(-500, JUMP_VELOCITY * 1.2)
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	isHurt = false

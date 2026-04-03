@@ -24,7 +24,8 @@ texture_region_size = Vector2i(256, 256)
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-95.72208, -39.230362, 89.44524, -45.507217, 128, 128, -128, 128)
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-92.58365, -4.7076416, 98.86052, 1.5692139, 128, 128, -128, 128)
+5:1/0/custom_data_0 = 1
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 0:2/0 = 0
@@ -59,15 +60,19 @@ texture_region_size = Vector2i(256, 256)
 [sub_resource type="TileSet" id="TileSet_xesoj"]
 tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "damage"
+custom_data_layer_0/type = 2
 sources/28 = SubResource("TileSetAtlasSource_3flxk")
 tile_proxies/coords_level = [[0, Vector2i(0, 0)], [28, Vector2i(0, 0)], [1, Vector2i(0, 0)], [28, Vector2i(1, 0)], [2, Vector2i(0, 0)], [28, Vector2i(2, 0)], [3, Vector2i(0, 0)], [28, Vector2i(3, 0)], [4, Vector2i(0, 0)], [28, Vector2i(4, 0)], [5, Vector2i(0, 0)], [28, Vector2i(5, 0)], [6, Vector2i(0, 0)], [28, Vector2i(6, 0)], [7, Vector2i(0, 0)], [28, Vector2i(0, 1)], [8, Vector2i(0, 0)], [28, Vector2i(1, 1)], [9, Vector2i(0, 0)], [28, Vector2i(2, 1)], [10, Vector2i(0, 0)], [28, Vector2i(3, 1)], [11, Vector2i(0, 0)], [28, Vector2i(4, 1)], [12, Vector2i(0, 0)], [28, Vector2i(5, 1)], [13, Vector2i(0, 0)], [28, Vector2i(6, 1)], [14, Vector2i(0, 0)], [28, Vector2i(0, 2)], [15, Vector2i(0, 0)], [28, Vector2i(1, 2)], [16, Vector2i(0, 0)], [28, Vector2i(2, 2)], [17, Vector2i(0, 0)], [28, Vector2i(3, 2)], [18, Vector2i(0, 0)], [28, Vector2i(4, 2)], [19, Vector2i(0, 0)], [28, Vector2i(5, 2)], [20, Vector2i(0, 0)], [28, Vector2i(6, 2)], [21, Vector2i(0, 0)], [28, Vector2i(0, 3)], [22, Vector2i(0, 0)], [28, Vector2i(1, 3)], [23, Vector2i(0, 0)], [28, Vector2i(2, 3)], [24, Vector2i(0, 0)], [28, Vector2i(3, 3)], [25, Vector2i(0, 0)], [28, Vector2i(4, 3)], [26, Vector2i(0, 0)], [28, Vector2i(5, 3)], [27, Vector2i(0, 0)], [28, Vector2i(6, 3)]]
 
 [node name="level_1" type="Node2D" unique_id=241782322]
 
-[node name="player" parent="." unique_id=2109459935 instance=ExtResource("1_tw77e")]
-position = Vector2(286, 390)
+[node name="player" parent="." unique_id=2109459935 node_paths=PackedStringArray("tileMap") instance=ExtResource("1_tw77e")]
+position = Vector2(519, 421)
+scale = Vector2(0.8, 0.8)
+tileMap = NodePath("../TileMapLayer")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795828731]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAFAAMAHAAFAAEAAAA=")
 tile_set = SubResource("TileSet_xesoj")
