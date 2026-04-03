@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://iojc0pjxc72f"]
+
+[ext_resource type="Texture2D" uid="uid://cr0mh8bqxapxu" path="res://assets/saw/saw_animation/rotating_saw_01.png" id="1_2m23q"]
+[ext_resource type="Script" uid="uid://q3h0vjon67qx" path="res://script/saw.gd" id="1_piasn"]
+[ext_resource type="Texture2D" uid="uid://p7tohycx644f" path="res://assets/saw/saw_animation/rotating_saw_02.png" id="2_piasn"]
+[ext_resource type="Texture2D" uid="uid://bgeh6t522cbo" path="res://assets/saw/saw_animation/rotating_saw_03.png" id="3_ueuyr"]
+[ext_resource type="Texture2D" uid="uid://c8xbd86mc6fnb" path="res://assets/saw/saw_animation/rotating_saw_04.png" id="4_xv4h5"]
+[ext_resource type="Texture2D" uid="uid://b8ls4cni8m6r0" path="res://assets/saw/saw_animation/rotating_saw_05.png" id="5_hu8mg"]
+[ext_resource type="Texture2D" uid="uid://dronof2cfewe8" path="res://assets/saw/saw_animation/rotating_saw_06.png" id="6_x58qy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uh8ir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2m23q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_piasn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ueuyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xv4h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hu8mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x58qy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="saw" type="Area2D" unique_id=1925869813]
+script = ExtResource("1_piasn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1367671474]
+sprite_frames = SubResource("SpriteFrames_uh8ir")
+autoplay = "default"
+frame_progress = 0.17422624
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=9944336]
+polygon = PackedVector2Array(-117, 70, -113, 13, -55, -52, 3, -66, 57, -55, 100, -17, 123, 32, 127, 73)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

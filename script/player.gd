@@ -48,7 +48,7 @@ func check_tile_damage():
 	var tile_data := tileMap.get_cell_tile_data(cell)
 
 	if tile_data and tile_data.get_custom_data("damage") == 1:
-		take_damage(1, global_position)
+		take_damage(1, tileMap.to_global(local_pos))
 
 func take_damage(_damage, object_position):
 	print("taking damage")

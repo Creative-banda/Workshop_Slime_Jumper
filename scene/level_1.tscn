@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dueaa01ura5r6" path="res://scene/player.tscn" id="1_tw77e"]
 [ext_resource type="Texture2D" uid="uid://deh45f54y63k2" path="res://assets/map/map.png" id="2_rpurj"]
+[ext_resource type="PackedScene" uid="uid://iojc0pjxc72f" path="res://scene/saw.tscn" id="3_3flxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3flxk"]
 texture = ExtResource("2_rpurj")
@@ -76,3 +77,7 @@ tileMap = NodePath("../TileMapLayer")
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAFAAMAHAAFAAEAAAA=")
 tile_set = SubResource("TileSet_xesoj")
+
+[node name="saw" parent="." unique_id=1925869813 instance=ExtResource("3_3flxk")]
+position = Vector2(260, 474)
+scale = Vector2(0.5, 0.5)
