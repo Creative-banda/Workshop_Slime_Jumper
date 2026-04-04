@@ -1,7 +1,6 @@
 extends Area2D
 
 @export var damage := 1
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @export var is_moving := false
 @export var left_marker: Marker2D
 @export var right_marker: Marker2D

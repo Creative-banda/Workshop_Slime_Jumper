@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dueaa01ura5r6" path="res://scene/player.tscn" id="1_tw77e"]
 [ext_resource type="Texture2D" uid="uid://deh45f54y63k2" path="res://assets/map/map.png" id="2_rpurj"]
 [ext_resource type="PackedScene" uid="uid://iojc0pjxc72f" path="res://scene/saw.tscn" id="3_3flxk"]
+[ext_resource type="PackedScene" uid="uid://bq645o7b0746" path="res://scene/red_barrel.tscn" id="4_xesoj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3flxk"]
 texture = ExtResource("2_rpurj")
@@ -100,3 +101,7 @@ position = Vector2(1270, 501)
 
 [node name="right" type="Marker2D" parent="." unique_id=1959653734]
 position = Vector2(1798, 491)
+
+[node name="Red_barrel" parent="." unique_id=1251751661 instance=ExtResource("4_xesoj")]
+position = Vector2(1034.9998, 428.99994)
+scale = Vector2(0.7, 0.7)
