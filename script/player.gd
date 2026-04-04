@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var tileMap : TileMapLayer
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -550.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var push_body: Area2D = $push_body
 const PUSH_FORCE = 1200.0

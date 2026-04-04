@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://iojc0pjxc72f" path="res://scene/saw.tscn" id="3_3flxk"]
 [ext_resource type="PackedScene" uid="uid://bq645o7b0746" path="res://scene/red_barrel.tscn" id="4_xesoj"]
 [ext_resource type="PackedScene" uid="uid://ogwdmkeqgrwb" path="res://scene/box.tscn" id="5_53ndp"]
+[ext_resource type="PackedScene" uid="uid://bo42c2t8ib7lm" path="res://scene/acid.tscn" id="6_70cbr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3flxk"]
 texture = ExtResource("2_rpurj")
@@ -80,9 +81,14 @@ position = Vector2(2.4999998, -161.25)
 zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 
+[node name="acid" parent="." unique_id=1190173975 instance=ExtResource("6_70cbr")]
+position = Vector2(896, 611.9999)
+rotation = 0.0012024438
+scale = Vector2(1.0462335, 0.9019273)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795828731]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAAQAAMAHAAFAAEAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAAQAAMAHAAFAAEAAAABAAUAHAADAAIAAAACAAUAHAADAAIAAAADAAUAHAADAAIAAAAEAAUAHAADAAIAAAAFAAUAHAADAAIAAAAGAAUAHAADAAIAAAAHAAUAHAADAAIAAAAIAAUAHAADAAIAAAAJAAUAHAADAAIAAAAKAAUAHAADAAIAAAALAAUAHAADAAIAAAAMAAUAHAADAAIAAAANAAUAHAADAAIAAAAOAAUAHAADAAIAAAAPAAUAHAADAAIAAAAQAAUAHAADAAIAAAARAAUAHAADAAIAAAA=")
 tile_set = SubResource("TileSet_xesoj")
 
 [node name="saw" parent="." unique_id=1925869813 instance=ExtResource("3_3flxk")]
@@ -108,4 +114,4 @@ position = Vector2(1967, 425.99997)
 scale = Vector2(0.7, 0.7)
 
 [node name="box" parent="." unique_id=2050732727 instance=ExtResource("5_53ndp")]
-position = Vector2(1055, 448)
+position = Vector2(1326, 443)
