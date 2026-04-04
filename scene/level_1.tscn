@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bq645o7b0746" path="res://scene/red_barrel.tscn" id="4_xesoj"]
 [ext_resource type="PackedScene" uid="uid://ogwdmkeqgrwb" path="res://scene/box.tscn" id="5_53ndp"]
 [ext_resource type="PackedScene" uid="uid://bo42c2t8ib7lm" path="res://scene/acid.tscn" id="6_70cbr"]
+[ext_resource type="PackedScene" uid="uid://clx26rkxmlaep" path="res://scene/batteies.tscn" id="7_lsoxn"]
+[ext_resource type="PackedScene" uid="uid://dw2rxp2kui60t" path="res://scene/door.tscn" id="8_x17xt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3flxk"]
 texture = ExtResource("2_rpurj")
@@ -71,16 +73,6 @@ tile_proxies/coords_level = [[0, Vector2i(0, 0)], [28, Vector2i(0, 0)], [1, Vect
 
 [node name="level_1" type="Node2D" unique_id=241782322]
 
-[node name="player" parent="." unique_id=2109459935 node_paths=PackedStringArray("tileMap") instance=ExtResource("1_tw77e")]
-position = Vector2(519, 421)
-scale = Vector2(0.8, 0.8)
-tileMap = NodePath("../TileMapLayer")
-
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1248229004]
-position = Vector2(2.4999998, -161.25)
-zoom = Vector2(0.7, 0.7)
-position_smoothing_enabled = true
-
 [node name="acid" parent="." unique_id=1190173975 instance=ExtResource("6_70cbr")]
 position = Vector2(896, 611.9999)
 rotation = 0.0012024438
@@ -88,8 +80,23 @@ scale = Vector2(1.0462335, 0.9019273)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795828731]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAAQAAMAHAAFAAEAAAABAAUAHAADAAIAAAACAAUAHAADAAIAAAADAAUAHAADAAIAAAAEAAUAHAADAAIAAAAFAAUAHAADAAIAAAAGAAUAHAADAAIAAAAHAAUAHAADAAIAAAAIAAUAHAADAAIAAAAJAAUAHAADAAIAAAAKAAUAHAADAAIAAAALAAUAHAADAAIAAAAMAAUAHAADAAIAAAANAAUAHAADAAIAAAAOAAUAHAADAAIAAAAPAAUAHAADAAIAAAAQAAUAHAADAAIAAAARAAUAHAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAAQAAMAHAAFAAEAAAABAAUAHAADAAIAAAACAAUAHAADAAIAAAADAAUAHAADAAIAAAAEAAUAHAADAAIAAAAFAAUAHAADAAIAAAAGAAUAHAADAAIAAAAHAAUAHAADAAIAAAAIAAUAHAADAAIAAAAJAAUAHAADAAIAAAAKAAUAHAADAAIAAAALAAUAHAADAAIAAAAMAAUAHAADAAIAAAANAAUAHAADAAIAAAAOAAUAHAADAAIAAAAPAAUAHAADAAIAAAAQAAUAHAADAAIAAAARAAUAHAADAAIAAAASAAQAHAAAAAIAAAATAAQAHAAAAAIAAAAUAAQAHAAAAAIAAAAVAAQAHAAAAAIAAAAWAAQAHAAAAAIAAAAXAAQAHAAAAAIAAAAYAAQAHAAAAAIAAAAZAAQAHAAAAAIAAAAaAAQAHAAAAAIAAAAbAAQAHAAAAAIAAAAcAAQAHAAAAAIAAAA=")
 tile_set = SubResource("TileSet_xesoj")
+
+[node name="door" parent="." unique_id=618788760 instance=ExtResource("8_x17xt")]
+position = Vector2(1328, 377)
+scale = Vector2(0.6, 0.6)
+isLocked = true
+
+[node name="player" parent="." unique_id=2109459935 node_paths=PackedStringArray("tileMap") instance=ExtResource("1_tw77e")]
+position = Vector2(249.99998, 424)
+scale = Vector2(0.8, 0.8)
+tileMap = NodePath("../TileMapLayer")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1248229004]
+position = Vector2(2.4999998, -161.25)
+zoom = Vector2(0.7, 0.7)
+position_smoothing_enabled = true
 
 [node name="saw" parent="." unique_id=1925869813 instance=ExtResource("3_3flxk")]
 position = Vector2(70, 474)
@@ -110,8 +117,20 @@ position = Vector2(1270, 501)
 position = Vector2(1798, 491)
 
 [node name="Red_barrel" parent="." unique_id=1251751661 instance=ExtResource("4_xesoj")]
-position = Vector2(1967, 425.99997)
+position = Vector2(3257.9998, 418)
 scale = Vector2(0.7, 0.7)
 
 [node name="box" parent="." unique_id=2050732727 instance=ExtResource("5_53ndp")]
-position = Vector2(1326, 443)
+position = Vector2(2978, 389)
+
+[node name="battery" parent="." unique_id=1951527891 instance=ExtResource("7_lsoxn")]
+position = Vector2(517, 395)
+scale = Vector2(0.8, 0.8)
+
+[node name="battery2" parent="." unique_id=167694180 instance=ExtResource("7_lsoxn")]
+position = Vector2(712, 413)
+scale = Vector2(0.8, 0.8)
+
+[node name="battery3" parent="." unique_id=586317476 instance=ExtResource("7_lsoxn")]
+position = Vector2(1111, 442)
+scale = Vector2(0.8, 0.8)

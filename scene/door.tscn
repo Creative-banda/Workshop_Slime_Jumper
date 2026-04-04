@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dw2rxp2kui60t"]
+
+[ext_resource type="Texture2D" uid="uid://dovupi67jw7y0" path="res://assets/map/Objects/DoorOpen.png" id="1_i7qj5"]
+[ext_resource type="Script" uid="uid://d14iltb1358hk" path="res://script/door.gd" id="1_psa10"]
+[ext_resource type="Texture2D" uid="uid://mny57c4wbwbx" path="res://assets/map/Objects/DoorLocked.png" id="3_2tyue"]
+[ext_resource type="FontFile" uid="uid://bcew68odvs4mf" path="res://assets/fonts/Starjedi.ttf" id="4_2tyue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i7qj5"]
+size = Vector2(278, 462)
+
+[node name="door" type="Area2D" unique_id=618788760]
+script = ExtResource("1_psa10")
+
+[node name="DoorOpen" type="Sprite2D" parent="." unique_id=1292013765]
+texture = ExtResource("1_i7qj5")
+
+[node name="Doorlocked" type="Sprite2D" parent="." unique_id=1507093146]
+texture = ExtResource("3_2tyue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1510690604]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_i7qj5")
+
+[node name="Label" type="Label" parent="." unique_id=382846863]
+offset_left = -35.0
+offset_top = -86.0
+offset_right = 28.0
+offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("4_2tyue")
+theme_override_font_sizes/font_size = 107
+text = "3"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
