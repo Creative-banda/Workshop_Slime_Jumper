@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://deh45f54y63k2" path="res://assets/map/map.png" id="2_rpurj"]
 [ext_resource type="PackedScene" uid="uid://iojc0pjxc72f" path="res://scene/saw.tscn" id="3_3flxk"]
 [ext_resource type="PackedScene" uid="uid://bq645o7b0746" path="res://scene/red_barrel.tscn" id="4_xesoj"]
+[ext_resource type="PackedScene" uid="uid://ogwdmkeqgrwb" path="res://scene/box.tscn" id="5_53ndp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3flxk"]
 texture = ExtResource("2_rpurj")
@@ -75,17 +76,17 @@ scale = Vector2(0.8, 0.8)
 tileMap = NodePath("../TileMapLayer")
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1248229004]
-position = Vector2(0, -99.99997)
+position = Vector2(2.4999998, -161.25)
 zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795828731]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAFAAMAHAAFAAEAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAAQAAMAHAAFAAEAAAA=")
 tile_set = SubResource("TileSet_xesoj")
 
 [node name="saw" parent="." unique_id=1925869813 instance=ExtResource("3_3flxk")]
-position = Vector2(260, 474)
+position = Vector2(70, 474)
 scale = Vector2(0.5, 0.5)
 
 [node name="saw2" parent="." unique_id=604149551 node_paths=PackedStringArray("left_marker", "right_marker") instance=ExtResource("3_3flxk")]
@@ -103,5 +104,8 @@ position = Vector2(1270, 501)
 position = Vector2(1798, 491)
 
 [node name="Red_barrel" parent="." unique_id=1251751661 instance=ExtResource("4_xesoj")]
-position = Vector2(1034.9998, 428.99994)
+position = Vector2(1967, 425.99997)
 scale = Vector2(0.7, 0.7)
+
+[node name="box" parent="." unique_id=2050732727 instance=ExtResource("5_53ndp")]
+position = Vector2(1055, 448)

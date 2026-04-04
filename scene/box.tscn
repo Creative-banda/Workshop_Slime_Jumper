@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ogwdmkeqgrwb"]
+
+[ext_resource type="Script" uid="uid://bqr84jpohtdcj" path="res://script/box.gd" id="1_3tsfx"]
+[ext_resource type="Texture2D" uid="uid://4yl3mk75d2q" path="res://assets/map/Objects/Box.png" id="1_dmwsn"]
+
+[node name="box" type="RigidBody2D" unique_id=2050732727]
+script = ExtResource("1_3tsfx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2030038808]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dmwsn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1632504626]
+polygon = PackedVector2Array(-64, -46, -49, -63, 45, -64, 63, -47, 64, 46, 47, 63, -44, 64, -64, 46)

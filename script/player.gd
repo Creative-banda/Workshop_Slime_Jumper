@@ -5,6 +5,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var push_body: Area2D = $push_body
+const PUSH_FORCE = 1200.0
+
 var isHurt: bool = false
 
 func _physics_process(delta: float) -> void:
@@ -33,7 +36,11 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, 10)
 	else:
 		velocity.x = move_toward(velocity.x, 0, 10)
-		
+	# Push any Rigid body
+	for body in push_body.get_overlapping_bodies():
+		if body is RigidBody2D:
+			var dir = (body.global_position - global_position).normalized()
+			body.apply_force(dir * PUSH_FORCE)
 	move_and_slide()
 	check_tile_damage()
 	
