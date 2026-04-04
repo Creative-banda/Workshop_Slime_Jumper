@@ -73,11 +73,30 @@ position = Vector2(519, 421)
 scale = Vector2(0.8, 0.8)
 tileMap = NodePath("../TileMapLayer")
 
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1248229004]
+position = Vector2(0, -99.99997)
+zoom = Vector2(0.7, 0.7)
+position_smoothing_enabled = true
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795828731]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAFAAMAHAAFAAEAAAA=")
+tile_map_data = PackedByteArray("AAAJAAQAHAAAAAIAAAAIAAQAHAAAAAIAAAAHAAQAHAAAAAIAAAAGAAQAHAAAAAIAAAAFAAQAHAAAAAIAAAABAAQAHAAAAAIAAAACAAQAHAAAAAIAAAAEAAQAHAAAAAIAAAADAAQAHAAAAAIAAAAAAAQAHAAAAAIAAAAFAAMAHAAFAAEAAAAKAAQAHAAAAAIAAAALAAQAHAAAAAIAAAAMAAQAHAAAAAIAAAANAAQAHAAAAAIAAAAOAAQAHAAAAAIAAAAPAAQAHAAAAAIAAAAQAAQAHAAAAAIAAAARAAQAHAAAAAIAAAA=")
 tile_set = SubResource("TileSet_xesoj")
 
 [node name="saw" parent="." unique_id=1925869813 instance=ExtResource("3_3flxk")]
 position = Vector2(260, 474)
 scale = Vector2(0.5, 0.5)
+
+[node name="saw2" parent="." unique_id=604149551 node_paths=PackedStringArray("left_marker", "right_marker") instance=ExtResource("3_3flxk")]
+position = Vector2(1567, 476)
+scale = Vector2(0.5, 0.5)
+is_moving = true
+left_marker = NodePath("../left")
+right_marker = NodePath("../right")
+speed = 100
+
+[node name="left" type="Marker2D" parent="." unique_id=907017570]
+position = Vector2(1270, 501)
+
+[node name="right" type="Marker2D" parent="." unique_id=1959653734]
+position = Vector2(1798, 491)
